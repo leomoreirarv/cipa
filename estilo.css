@@ -1,2 +1,81 @@
 /* CSS Document */
 
+@CHARSET "UTF-8";
+
+*{
+	font-family:"Trebuchet MS", Segoe, "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+	outline:none;
+	border:none;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+}
+
+header{
+	width: 100%;
+	height: 350px;
+	position: relative;
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
+	display:table;
+}
+
+	header > h1{
+		background-image:url(images/logo-topo.jpg);
+		background-repeat:no-repeat;
+		margin:15px 0 0 30px;
+		width:411px;
+		height:63px;
+		text-indent:-9000px;
+		float:left;
+	}
+	
+	header > nav{
+		float:right;
+		margin:20px 20px 0 0;
+	}
+	
+	header > nav > ul{
+		display:table;
+		list-style:none;
+	}
+	
+		header > nav > ul > li{
+			  width: 120px;
+			  height: 40px;
+			  float:left;
+		}
+		
+		header > nav > ul > li:first-child{
+			background-color: rgb(154, 180, 124);
+		}
+		
+ 		header > nav > ul > li:nth-child(2){
+			background-color: rgb(114, 148, 74);
+		}
+		
+  		header > nav > ul > li:nth-child(3){
+			background-color: rgb(89, 127, 46);
+		}
+		
+  		header > nav > ul > li:last-child{
+			background-color: rgb(72, 110, 27);
+		}
+
+		header > nav > ul > li:hover{
+ 			border-bottom:10px solid rgb(163, 189, 49);
+
+		}
+		
+		header > nav > ul > li > a{
+		  font-size: 12px;
+		  font-family: "Arial Black";
+		  color: rgb(255, 255, 255);
+		  text-transform: uppercase;
+		  line-height: 40px;
+		  text-align: center;
+		  display:block;
+		  width:100%;
+		}
