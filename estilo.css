@@ -12,14 +12,14 @@
 }
 
 header{
-	width: 100%;
+	width: 960px;
 	height: 350px;
 	position: relative;
 	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
 	background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
 	background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
 	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
-	display:table;
+	z-index:1;
 }
 
 	header > h1{
@@ -64,9 +64,8 @@ header{
 			background-color: rgb(72, 110, 27);
 		}
 
-		header > nav > ul > li:hover{
+		header > nav > ul > li:hover, header > nav > ul > li.ativo{
  			border-bottom:10px solid rgb(163, 189, 49);
-
 		}
 		
 		header > nav > ul > li > a{
@@ -79,3 +78,35 @@ header{
 		  display:block;
 		  width:100%;
 		}
+		
+	header > article#banner {
+		z-index:2;
+		display:table;
+	}
+	
+		header > article#banner > a, header > article#banner > ul#lista-banner{
+			float:left;
+		}
+		
+		header > article#banner > a{
+			margin-top: 150px;
+		}
+		
+		header > article#banner > a:first-child{
+			margin-left: 30px;
+		}
+		
+		header > article#banner > ul#lista-banner{
+			width:800px;
+			height:350px;
+			background:rgba(29,90,2,1.00);
+			overflow:hidden;
+			list-style:none;
+			margin:0 20px;
+		}
+		
+			header > article#banner > ul#lista-banner > li{
+				float: left;
+				width:800px;
+				height:350px;
+			}
