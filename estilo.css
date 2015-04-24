@@ -105,8 +105,12 @@ header{
 			margin:0 20px;
 		}
 		
+			/*header > article#banner > ul#lista-banner > li:first-child{
+				margin-left:0;
+			}*/
+			
 			header > article#banner > ul#lista-banner > li{
-				float: left;
 				width:800px;
 				height:350px;
+				display:inline-table;
 			}
