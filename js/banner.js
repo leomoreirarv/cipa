@@ -19,13 +19,14 @@ Banner.setFrame = function(frameId){
 
 //Method for load images
 Banner.carrega = function(e){
-	//Clear container banners
-	document.getElementById(this.frame).innerHTML = "";
 	//Loop array images
 	for(var i in this.imagens){
 		//Try insert html code in to box
 		try{
-			document.getElementById(this.frame).innerHTML += "<li style='margin-left: 0px;'><img src='"+this.imagens[i]+"'></li>";
+			document.getElementById(this.frame+"-lista").innerHTML += "<li><img src='"+this.imagens[i]+"'></li>";
+			var tamBoxLista = document.getElementById(this.frame+"-lista").style.width;
+			tamBoxLista = parseInt(tamBoxLista.replace("px",""));
+			document.getElementById(this.frame+"-lista").style.width = tamBoxLista + 800 +"px";
 		} catch(err){
 			//Send error to console log
 			console.log("Erro: "+err);
@@ -33,32 +34,31 @@ Banner.carrega = function(e){
 	}
 }
 
-//Show next banner
-Banner.proximo = function(){
+//Show banner
+Banner.move = function(acao){
 	//Container show banner
-	var boxBanner = document.getElementById(this.frame);
+	var boxBanner = document.getElementById(this.frame+"-lista");
 	//Initial Position's first banner
-	var posBanner1 = boxBanner.firstChild.style.marginLeft;
+	var posBanner1 = boxBanner.style.marginLeft;
 	//Modify string postion to integer position
 	posBanner1 = parseInt(posBanner1.replace("px",""));
 	//Decrement 800 for position first banner
-	posBanner1 -= 800;
-	//Write the new rule css
-	boxBanner.firstChild.style.marginLeft = posBanner1+"px";
-	console.log(boxBanner.firstChild.style.marginLeft);
-}
-
-//Show previous banner
-Banner.anterior = function(){
-	//Container show banner
-	var boxBanner = document.getElementById(this.frame);
-	//Initial Position's first banner
-	var posBanner1 = boxBanner.firstChild.style.marginLeft;
-	//Modify string postion to integer position
-	posBanner1 = parseInt(posBanner1.replace("px",""));
-	//Add 800 for position first banner
-	posBanner1 += 800;
-	//Write the new rule css
-	boxBanner.firstChild.style.marginLeft = posBanner1+"px";
-	console.log(boxBanner.firstChild.style.marginLeft);
+	var cont = 0;
+	var intervalo = setInterval(function(){
+		if(cont < 80){
+			switch(acao){
+				case "next":
+					posBanner1 -= 10;
+				break;
+				case "previous":
+					posBanner1 += 10;
+				break;
+			}
+			//Write the new rule css
+			boxBanner.style.marginLeft = posBanner1+"px";
+			cont++
+		} else {
+			clearInterval(intervalo);
+		}
+	}, 25);
 }

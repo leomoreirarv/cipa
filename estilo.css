@@ -84,7 +84,8 @@ header{
 		display:table;
 	}
 	
-		header > article#banner > a, header > article#banner > ul#lista-banner{
+		header > article#banner > a, 
+		header > article#banner > div#box-banner{
 			float:left;
 		}
 		
@@ -96,20 +97,24 @@ header{
 			margin-left: 30px;
 		}
 		
-		header > article#banner > ul#lista-banner{
+		header > article#banner > div#box-banner{
 			width:800px;
 			height:350px;
 			background:rgba(29,90,2,1.00);
 			overflow:hidden;
 			list-style:none;
 			margin:0 20px;
+			position: relative;
+			z-index:5;
 		}
-		
-			/*header > article#banner > ul#lista-banner > li:first-child{
-				margin-left:0;
-			}*/
+	
+			header > article#banner > div#box-banner > ul#box-banner-lista{
+				display:table;
+				position:absolute;
+				z-index:4;
+			}
 			
-			header > article#banner > ul#lista-banner > li{
+			header > article#banner > div#box-banner > ul#box-banner-lista > li{
 				width:800px;
 				height:350px;
 				display:inline-table;

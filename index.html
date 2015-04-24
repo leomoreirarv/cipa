@@ -19,11 +19,12 @@
 		</ul>
 	</nav>
 	<article id="banner"> 
-    		<a href="#" onClick="Banner.anterior()"><img src="images/seta-banner-1.png"></a>
-        <ul id="lista-banner">
-        		Qualquer coisa
-        </ul>
-        <a href="#" onClick="Banner.proximo()"><img src="images/seta-banner-2.png"></a>
+    		<a href="#" onClick="Banner.move('previous')"><img src="images/seta-banner-1.png"></a>
+        <div id="box-banner">
+            <ul id="box-banner-lista" style="margin-left:0px; width:800px;">
+            </ul>
+        </div>
+        <a href="#" onClick="Banner.move('next')"><img src="images/seta-banner-2.png"></a>
     </article>
 </header>
 <article id="servicos">
@@ -63,7 +64,7 @@
 	Banner.setImagens("http://www.lorempixel.com/800/350/city/4");
 	Banner.setImagens("http://www.lorempixel.com/800/350/city/5");
 	
-	Banner.setFrame("lista-banner");
+	Banner.setFrame("box-banner");
 	Banner.carrega();
 </script>
 </body>
