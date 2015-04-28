@@ -19,15 +19,15 @@
 		</ul>
 	</nav>
 	<article id="banner"> 
-    		<a href="#" onClick="Banner.move('previous')"><img src="images/seta-banner-1.png"></a>
+    		<a href="#" class="nav-banner" onClick="B.move('<');"><img src="images/seta-banner-1.png"></a>
         <div id="box-banner">
-            <ul id="box-banner-lista" style="margin-left:0px; width:800px;">
+            <ul id="box-banner-lista" style="width:0px; margin-left:0px;">
             </ul>
         </div>
-        <a href="#" onClick="Banner.move('next')"><img src="images/seta-banner-2.png"></a>
+        <a href="#" class="nav-banner" onClick="B.move('>');"><img src="images/seta-banner-2.png"></a>
     </article>
 </header>
-<article id="servicos">
+<!--<article id="servicos">
 	<section class="servico">nome do serviço</section>
 	<section class="servico">nome do serviço</section>
 	<section class="servico">nome do serviço</section>
@@ -56,16 +56,17 @@
     		<p>Desenvolvido por:</p>
         <h1>Studio M Tecnologia Web LTDA</h1>
     </section>
-</footer>
+</footer>-->
 <script type="text/javascript">
-	Banner.setImagens("http://www.lorempixel.com/800/350/city/1");
-	Banner.setImagens("http://www.lorempixel.com/800/350/city/2");
-	Banner.setImagens("http://www.lorempixel.com/800/350/city/3");
-	Banner.setImagens("http://www.lorempixel.com/800/350/city/4");
-	Banner.setImagens("http://www.lorempixel.com/800/350/city/5");
 	
-	Banner.setFrame("box-banner");
-	Banner.carrega();
+	var B = new Banner();
+	B.setImagens("http://www.lorempixel.com/800/350/city/1");
+	B.setImagens("http://www.lorempixel.com/800/350/city/2");
+	B.setImagens("http://www.lorempixel.com/800/350/city/3");
+	B.setImagens("http://www.lorempixel.com/800/350/city/4");
+	B.setImagens("http://www.lorempixel.com/800/350/city/5");
+	B.setLargura(800);
+	B.carrega();
 </script>
 </body>
 </html>
