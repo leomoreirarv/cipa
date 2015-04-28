@@ -1,30 +1,34 @@
 // JavaScript Document
 
-//Cria objeto Banner
+//Create the Banner Object
 function Banner(){
-	//Propriedades
+	//Creates the object properties
 	this.imagens = new Array();
 	this.largura = new Number();
 	this.boxListaBanner = new Object();
 	this.tamBox = new Number();
 	
-	//Largura das imagens dos banners
+	//Assigns the width of the images
 	this.setLargura = function(num){
 		this.largura = num;
 	}
 	
+	//Add url to the image array
 	this.setImagens = function(url){
 		this.imagens.push(url);
 	}
 	
+	//Assigns the box that will receive the list of banners
 	this.setBox = function(){
 		this.boxListaBanner = document.getElementById("box-banner-lista");
 	}
 	
+	//Assigns the width of the box that will receive the banners
 	this.setTamBox = function(){
 		this.tamBox = parseInt(this.boxListaBanner.style.width.replace("px",""));
 	}
 	
+	//Method that carries the banner and starts the automatic transition
 	this.carrega = function(){
 		var self = this;
 		try{
@@ -41,8 +45,8 @@ function Banner(){
 		}
 	}
 	
+	//Method that moves the banners based on the parameter "direction". ">" forward and "<" back
 	this.move = function(direcao){
-		 //var posLista = parseInt(this.boxListaBanner.style.marginLeft.replace("px",""));
 		var posLista = parseInt(this.boxListaBanner.style.marginLeft.replace("px",""));
 		var tamBox
 		var novaPosicao = "";
