@@ -82,6 +82,8 @@ header{
 	header > article#banner {
 		z-index:2;
 		display:table;
+		clear:both;
+		width:960px;
 	}
 	
 		header > article#banner > a, 
