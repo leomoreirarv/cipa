@@ -48,7 +48,7 @@ function Banner(){
 	//Method that moves the banners based on the parameter "direction". ">" forward and "<" back
 	this.move = function(direcao){
 		var posLista = parseInt(this.boxListaBanner.style.marginLeft.replace("px",""));
-		var tamBox
+		var tamBox;
 		var novaPosicao = "";
 		switch(direcao){
 			case ">":
