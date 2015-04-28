@@ -31,6 +31,7 @@ function Banner(){
 	
 	//Method that carries the banner and starts the automatic transition
 	this.carrega = function(){
+		var self = this;
 		try{
 			for(var i in this.imagens){
 				this.setBox();
@@ -38,8 +39,7 @@ function Banner(){
 				this.boxListaBanner.innerHTML += "<li><img src='"+this.imagens[i]+"'></li>";
 				this.setTamBox();
 			}
-			var apontador = function(){this.move(">")};
-			window.setInterval(apontador, 5000);
+			window.setInterval(function(){self.move(">");}, 5000);
 		} catch(erro){
 			console.log("Erro: "+erro);
 		}
