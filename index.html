@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<div id="todo">
 <header>
 	<h1 id="logo">CIPA Assessoria</h1>
 	<nav>
@@ -27,11 +28,23 @@
         <a href="#" class="nav-banner" onClick="b.move('>');"><img src="images/seta-banner-2.png"></a>
     </article>
 </header>
-<!--<article id="servicos">
-	<section class="servico">nome do serviço</section>
-	<section class="servico">nome do serviço</section>
-	<section class="servico">nome do serviço</section>
-	<section class="servico">nome do serviço</section>
+<article id="servicos">
+	<section class="servico">
+    		<a href="#"><img src="http://www.lorempixel.com/156/156/people/1"/></a>
+        <h3>Palestras e treinamentos</h3>
+    </section>
+    <section class="servico"> 
+    		<a href="#"><img src="http://www.lorempixel.com/156/156/people/2"/></a>
+        <h3>Palestras e treinamentos</h3>
+    </section>	
+    <section class="servico">
+    		<a href="#"><img src="http://www.lorempixel.com/156/156/people/3"/></a>
+        <h3>Palestras e treinamentos</h3>
+    </section>
+    <section class="servico">
+    		<a href="#"><img src="http://www.lorempixel.com/156/156/people/4"/></a>
+        <h3>Palestras e treinamentos</h3>
+    </section>
 </article>
 <article id="chamadaPrincipal">
 	<h1>Bem vindo(a)!</h1>
@@ -45,18 +58,29 @@
 		<p>Todos os Direitos Reservados (C) 2015</p>
 	</section>
 	<section id="dados">
-    		<h1>(64) 3623-1127</h1>
-        <h2>8405-7288 / 9907-4230</h2>
-        <br>
-        <p>cipaassessoria@bol.com.br</p>
-        <p>Rua 12, 929 - Jardim América</p>
-        <p>Rio Verde - GO</p>
+    		<div id="telefones">
+            <div><img src="images/ico-rodape_07.png"></div>
+            <div>
+                <h1>(64) 3623-1127</h1>
+                <h2>8405-7288 / 9907-4230</h2>
+            </div>
+        </div>
+        <div id="endereco">
+            <div><img src="images/ico-rodape_16.png"></div>
+            <div>
+                <p>cipaassessoria@bol.com.br</p>
+                <br>
+                <p>Rua 12, 929 - Jardim América</p>
+                <p>Rio Verde - GO</p>
+            </div>
+        </div>
     </section>
     <section id="creditos">
     		<p>Desenvolvido por:</p>
         <h1>Studio M Tecnologia Web LTDA</h1>
     </section>
-</footer>-->
+</footer>
+</div>
 <script type="text/javascript">
 	var b = new Banner();
 	b.setImagens("http://www.lorempixel.com/800/350/city/1");

@@ -11,6 +11,11 @@
 	padding:0;
 }
 
+div#todo{
+	width:960px;
+	margin:0 auto;
+}
+
 header{
 	width: 960px;
 	height: 350px;
@@ -120,4 +125,192 @@ header{
 				width:800px;
 				height:350px;
 				display:inline-table;
+			}
+			
+	article#servicos{
+		background-image:url(images/sombra-banner_03.jpg);
+		background-position:top;
+		background-repeat:no-repeat;
+		min-width:800px;
+		margin:0 auto;
+		margin-top:78px;
+		padding-top:40px;
+		display:table;
+	}
+	
+		section.servico{
+			float:left;
+			margin:0 22px;
+			width:156px;
+			background-image:url(images/sombra-servicos_03.jpg);
+			background-repeat:no-repeat;
+			background-position:center 136px;
+		}
+		
+		
+		
+		section.servico > a > img{
+  			border-radius: 50%;
+			border:2px solid #fff;
+		}
+		
+			section.servico > a > img:hover{
+				-webkit-animation-duration: 3s;
+				-webkit-animation-name: anima1;
+				-o-animation-duration: 3s;
+				-o-animation-name: anima1;
+				-moz-animation-duration: 3s;
+				-moz-animation-name: anima1;
+				animation-duration: 3s;
+				animation-name: anima1;
+				border:2px solid #0E9800;
+				box-shadow: 0 0 50px #8BFA83;
+			}
+		
+		@-webkit-keyframes anima1{
+			from{ opacity: 1; }
+			to{ opacity: .5; }
+		}
+		
+		@-o-keyframes anima1{
+			from{ opacity: 1; }
+			to{ opacity: .5; }
+		}
+		
+		@-moz-keyframes anima1{
+			from{ opacity: 1; }
+			to{ opacity: .5; }
+		}
+		
+		@keyframes anima1{
+			from{ opacity: 1; }
+			to{ opacity: .5; }
+		}
+		
+		section.servico > h3{
+		  margin-top:15px;
+		  font-size: 16px;
+		  font-family: "Trebuchet MS";
+		  line-height: 0.938;
+		  text-align: center;
+		  color:#959494;
+		}
+		
+		article#chamadaPrincipal {
+		  background-color: rgb(221, 228, 201);
+		  width: 920px;
+		  height: 290px;
+		  padding:20px;
+		  margin-top:30px;
+		}
+
+
+			article#chamadaPrincipal > h1{
+				font-size: 48px;
+				font-family: "Trebuchet MS";
+				color: rgb(69, 88, 15);
+				text-align: center;	
+				margin-top:35px;
+			}
+			
+			article#chamadaPrincipal > h2{
+				font-size: 30px;
+				font-family: "Trebuchet MS";
+				color: rgb(100, 106, 96);
+				text-align: center;
+				margin-top:15px;
+				line-height:25px;
+			}
+			
+			article#chamadaPrincipal > p {
+				font-size: 22px;
+				font-family: "Trebuchet MS";
+				color: rgb(129, 129, 129);
+				text-align: center;
+				margin-top:20px;
+			}
+
+	footer{
+	background-color: #267419;
+	width: 920px;
+	height: 120px;
+	padding: 20px;
+	display: table;
+	}
+	
+	footer *{
+		color:#fff;
+	}
+	
+		footer > section{
+			float:left;
+			width:33%;
+		}
+		
+			footer > section#diretos > h1,
+			footer > section#creditos > h1
+			{
+				background-image:url(images/ico-rodape_10.png);
+				background-repeat:no-repeat;
+				width:233px;
+				height:43px;
+				display:block;
+				margin:0 auto;
+				text-indent:-3000px;
+			}
+			
+			footer > section#diretos > p{
+				  font-size: 13px;
+				  font-family: "Trebuchet MS";
+				  line-height: 1.2;
+				  text-align: center;
+			}
+			
+			footer > section#dados  h1{
+				font-size: 28px;
+				  font-family: "Trebuchet MS";
+			}
+			
+			footer > section#dados h2,
+			footer > section#dados p{
+				font-size: 18px;
+				  font-family: "Trebuchet MS";
+			}
+			
+				footer > section#dados > div#telefones,
+				footer > section#dados > div#endereco
+				{
+					display:table;
+				}
+				
+					footer > section#dados > div#telefones > div,
+					footer > section#dados > div#endereco > div
+					{
+						float:left;
+					}
+					
+					footer > section#dados > div#telefones > div:nth-child(2),
+					footer > section#dados > div#endereco > div:nth-child(2)
+					{
+						margin-left:15px;
+					}
+					
+					footer > section#dados > div#endereco{
+						margin-top:20px;
+					}
+					
+			footer > section#creditos > h1{
+				background-image:url(images/ico-rodape_14.png);
+				width:138px;
+				height:50px;
+				opacity:.3;
+			}
+			
+				footer > section#creditos > h1:hover{
+					opacity:1;
+				}
+			
+			footer > section#creditos > p{
+				font-size:12px;
+				text-align:center;
 			}
