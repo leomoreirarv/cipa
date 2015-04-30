@@ -11,13 +11,8 @@
 	padding:0;
 }
 
-div#todo{
-	width:960px;
-	margin:0 auto;
-}
-
 header{
-	width: 960px;
+	width: 100%;
 	height: 350px;
 	position: relative;
 	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(218,250,203,1.00) 100%);
@@ -27,7 +22,12 @@ header{
 	z-index:1;
 }
 
-	header > h1{
+	header > div#cont-header{
+		width:960px;
+		margin:0 auto;
+	}
+
+	header > div > h1{
 		background-image:url(images/logo-topo.jpg);
 		background-repeat:no-repeat;
 		margin:15px 0 0 30px;
@@ -37,43 +37,44 @@ header{
 		float:left;
 	}
 	
-	header > nav{
+	header > div > nav{
 		float:right;
 		margin:20px 20px 0 0;
 	}
 	
-	header > nav > ul{
+	header > div > nav > ul{
 		display:table;
 		list-style:none;
 	}
 	
-		header > nav > ul > li{
+		header > div > nav > ul > li{
 			  width: 120px;
 			  height: 40px;
 			  float:left;
 		}
 		
-		header > nav > ul > li:first-child{
+		header > div > nav > ul > li:first-child{
 			background-color: rgb(154, 180, 124);
 		}
 		
- 		header > nav > ul > li:nth-child(2){
+ 		header > div > nav > ul > li:nth-child(2){
 			background-color: rgb(114, 148, 74);
 		}
 		
-  		header > nav > ul > li:nth-child(3){
+  		header > div > nav > ul > li:nth-child(3){
 			background-color: rgb(89, 127, 46);
 		}
 		
-  		header > nav > ul > li:last-child{
+  		header > div > nav > ul > li:last-child{
 			background-color: rgb(72, 110, 27);
 		}
 
-		header > nav > ul > li:hover, header > nav > ul > li.ativo{
+		header > div > nav > ul > li:hover, 
+		header > div > nav > ul > li.ativo{
  			border-bottom:10px solid rgb(163, 189, 49);
 		}
 		
-		header > nav > ul > li > a{
+		header > div > nav > ul > li > a{
 		  font-size: 12px;
 		  font-family: "Arial Black";
 		  color: rgb(255, 255, 255);
@@ -84,27 +85,27 @@ header{
 		  width:100%;
 		}
 		
-	header > article#banner {
+	header > div > article#banner {
 		z-index:2;
 		display:table;
 		clear:both;
 		width:960px;
 	}
 	
-		header > article#banner > a, 
-		header > article#banner > div#box-banner{
+		header > div > article#banner > a, 
+		header > div > article#banner > div#box-banner{
 			float:left;
 		}
 		
-		header > article#banner > a{
+		header > div > article#banner > a{
 			margin-top: 150px;
 		}
 		
-		header > article#banner > a:first-child{
+		header > div > article#banner > a:first-child{
 			margin-left: 30px;
 		}
 		
-		header > article#banner > div#box-banner{
+		header > div > article#banner > div#box-banner{
 			width:800px;
 			height:350px;
 			background:rgba(29,90,2,1.00);
@@ -115,26 +116,33 @@ header{
 			z-index:5;
 		}
 	
-			header > article#banner > div#box-banner > ul#box-banner-lista{
+			header > div > article#banner > div#box-banner > ul#box-banner-lista{
 				display:table;
 				position:absolute;
 				z-index:4;
 			}
 			
-			header > article#banner > div#box-banner > ul#box-banner-lista > li{
+			header > div > article#banner > div#box-banner > ul#box-banner-lista > li{
 				width:800px;
 				height:350px;
 				display:inline-table;
 			}
 			
-	article#servicos{
-		background-image:url(images/sombra-banner_03.jpg);
-		background-position:top;
-		background-repeat:no-repeat;
-		min-width:800px;
+	main{
+		display:table;
+		min-height:200px;
+		width:960px;
 		margin:0 auto;
 		margin-top:78px;
 		padding-top:40px;
+		background-image:url(images/sombra-banner_03.jpg);
+		background-position:top;
+		background-repeat:no-repeat;
+	}
+			
+	article#servicos{
+		min-width:800px;
+		margin:0 auto;
 		display:table;
 	}
 	
@@ -202,6 +210,7 @@ header{
 		  height: 290px;
 		  padding:20px;
 		  margin-top:30px;
+		  margin-bottom:-20px;
 		}
 
 
@@ -231,24 +240,29 @@ header{
 			}
 
 	footer{
-	background-color: #267419;
-	width: 920px;
-	height: 120px;
-	padding: 20px;
-	display: table;
+		background-color: #267419;
+		width: 100%;
+		height: 120px;
+		padding: 20px 0;
+		display: table;
+	}
+	
+	footer > div#cont-footer{
+		width:960px;
+		margin:0 auto;
 	}
 	
 	footer *{
 		color:#fff;
 	}
 	
-		footer > section{
+		footer > div > section{
 			float:left;
 			width:33%;
 		}
 		
-			footer > section#diretos > h1,
-			footer > section#creditos > h1
+			footer > div > section#diretos > h1,
+			footer > div > section#creditos > h1
 			{
 				background-image:url(images/ico-rodape_10.png);
 				background-repeat:no-repeat;
@@ -259,58 +273,67 @@ header{
 				text-indent:-3000px;
 			}
 			
-			footer > section#diretos > p{
+			footer > div > section#diretos > p{
 				  font-size: 13px;
 				  font-family: "Trebuchet MS";
 				  line-height: 1.2;
 				  text-align: center;
 			}
 			
-			footer > section#dados  h1{
+			footer > div > section#dados  h1{
 				font-size: 28px;
 				  font-family: "Trebuchet MS";
 			}
 			
-			footer > section#dados h2,
-			footer > section#dados p{
+			footer > div > section#dados h2,
+			footer > div > section#dados p{
 				font-size: 18px;
 				  font-family: "Trebuchet MS";
 			}
 			
-				footer > section#dados > div#telefones,
-				footer > section#dados > div#endereco
+				footer > div > section#dados > div#telefones,
+				footer > div > section#dados > div#endereco
 				{
 					display:table;
 				}
 				
-					footer > section#dados > div#telefones > div,
-					footer > section#dados > div#endereco > div
+					footer > div > section#dados > div#telefones > div,
+					footer > div > section#dados > div#endereco > div
 					{
 						float:left;
 					}
 					
-					footer > section#dados > div#telefones > div:nth-child(2),
-					footer > section#dados > div#endereco > div:nth-child(2)
+					footer > div > section#dados > div#telefones > div:nth-child(2),
+					footer > div > section#dados > div#endereco > div:nth-child(2)
 					{
 						margin-left:15px;
 					}
 					
-					footer > section#dados > div#endereco{
+					footer > div > section#dados > div#endereco{
 						margin-top:20px;
 					}
 					
-			footer > section#creditos > h1{
+			footer > div > section#creditos > h1{
 				background-image:url(images/ico-rodape_14.png);
 				width:138px;
 				height:50px;
 				opacity:.3;
 			}
 			
-				footer > section#creditos > h1:hover{
+				footer > div > section#creditos > h1:hover{
 					opacity:1;
 				}
 			
-			footer > section#creditos > p{
+			footer > div > section#creditos > p{
 				font-size:12px;
 				text-align:center;
 			}
+			
+		footer > div > section:nth-child(2){
+			width:38%;
+			padding-left:5%;
+		}
+		
+		footer > div > section:nth-child(3){
+			width:23%;
+		}
