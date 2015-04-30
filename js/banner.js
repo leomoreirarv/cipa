@@ -36,7 +36,11 @@ function Banner(){
 			for(var i in this.imagens){
 				this.setBox();
 				this.boxListaBanner.style.width = this.tamBox + this.largura + "px";
-				this.boxListaBanner.innerHTML += "<li><img src='"+this.imagens[i]+"'></li>";
+				var novoItem = document.createElement("li");
+				var novaImagemBanner = document.createElement("img");
+				novaImagemBanner.setAttribute("src", this.imagens[i]);
+				novoItem.appendChild(novaImagemBanner);
+				this.boxListaBanner.appendChild(novoItem);
 				this.setTamBox();
 			}
 			window.setInterval(function(){self.move(">");}, 5000);
