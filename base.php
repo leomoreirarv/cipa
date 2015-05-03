@@ -25,7 +25,7 @@
             </div>
         </section>
         <section id="creditos">
-                <p>Desenvolvido por:</p>
+            <p>Desenvolvido por:</p>
             <h1>Studio M Tecnologia Web LTDA</h1>
         </section>
     </div>
@@ -43,18 +43,13 @@
 	b.setLargura(800);
 	b.carrega();
 	
-	//menu
-	function nomeArquivo(url){
-		var Caminho 	= new String();
-		var Arquivo 		= new String();
-		Caminho 			= url;
-		Caminho			= Caminho.replace("/\/g", "/");
-		Arquivo 			= Caminho.substring(Caminho.lastIndexOf('/') + 1);
-		Arquivo 			= Arquivo.substr(0, Arquivo.length - 4);
-		return Arquivo;
-	}
-	var idMenuAtivo = nomeArquivo(window.location.href);
-	document.getElementById(idMenuAtivo).setAttribute("class", "ativo");
+	//Menu
+	var m = new Menu();
+	m.destacaItemMenuAtivo();
+	m.setTamMenuSuperior(50);
+	m.setPontoCorteMenuSuperior(100);
+	m.setIdMenuSuperior("menu-topo-scroll");
+	m.controlaMenuSuperior();
 </script>
 </body>
 </html>

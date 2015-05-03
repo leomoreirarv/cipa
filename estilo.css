@@ -11,6 +11,47 @@
 	padding:0;
 }
 
+nav#menu-topo-scroll{
+	position:fixed;
+	top:0;
+	width:100%;
+	height:50px;
+	background:#0C3E00;
+	z-index:10000;
+	display:table;
+}
+	
+	nav#menu-topo-scroll > h1{
+		background-image:url(images/ico-rodape_10.png);
+		background-repeat:no-repeat;
+		width:233px;
+		height:43px;
+		display:block;
+		text-indent:-3000px;
+		float:left;
+		margin-left:20px;
+	}
+	
+	nav#menu-topo-scroll > ul{
+		display:table;
+		float:right;
+		margin-right:20px;
+	}
+	
+		nav#menu-topo-scroll > ul > li{
+			display:inline-table;
+			line-height:50px;
+		}
+		
+			nav#menu-topo-scroll > ul > li > a{
+				color:#fff;
+				padding:10px;
+			}
+			
+				nav#menu-topo-scroll > ul > li > a:hover{
+					background:#4D6C02;
+				}
+
 header{
 	width: 100%;
 	height: 350px;
@@ -70,7 +111,8 @@ header{
 		}
 
 		header > div > nav > ul > li:hover, 
-		header > div > nav > ul > li.ativo{
+		header > div > nav > ul > li.ativo,
+		li.ativo{
  			border-bottom:10px solid rgb(163, 189, 49);
 		}
 		
@@ -143,26 +185,96 @@ header{
 		background-repeat:no-repeat;
 	}
 	
-		main > h2{
-			font-size:38px;
-			color:#79AC88;
+		main > h1, main > h2{
 			font-style:italic;
 			font-family: 'Slabo 27px', serif;
 			margin:30px 0 15px 0;
 		}
 		
+		main > h1{
+			font-size:38px;
+			color:#083901;
+		}
+		
+		main > h2{
+			font-size:32px;
+			color:#79AC88;
+		}
+		
+		main > h3{
+			font-size:22px;
+			color:#576C55;
+			margin:100px 0 20px 0;
+		}
+		
+		main > h1, main > h2, main > h3{ clear:both; }
+		
 		main > p{
-			font-size:16px;
+			font-size:18px;
 			color:#666;
 			line-height:2;
 			margin-left:30px;
 			text-align:justify;
 		}
 		
+		main > span.img{
+			display:table;
+			padding:20px;
+			padding-top:0;
+			background-image:url(images/sombra-servicos_03.jpg);
+			background-repeat:no-repeat;
+			background-position:center 130px;
+			float: left;
+			margin-right: 20px;
+		}
+		
+		main > span.img > img{
+			border-radius:50%;
+			border:1px solid #fff;
+			overflow:hidden;
+		}
+		
+		main ul{
+			list-style:circle;
+			margin-left:40px;
+		}
+		
+		main li{
+			font-size:18px;
+			color:#666;
+		}
+		
+		main > ul > li{
+			font-family: 'Slabo 27px', serif;
+			font-size:26px;
+			color:#517444;
+		}
+		
+			main > ul a{
+				color:#585858;
+				font-size:16px;
+				padding:5px 15px;
+			}
+			
+				main > ul a:hover{
+					background:#efefef;
+					border-radius:10px;
+					color:#012D00;
+				}
+				
+				main > ul  li{
+					margin:10px 0;
+				}
+				
+				main > ul  > li{
+					margin:20px 0;
+				}
+		
 		main > nav#nav-inferior{
 			display:table;
 			margin:0 auto;
 			margin-top:20px;
+			clear:both;
 		}
 		
 			main > nav#nav-inferior > a{
@@ -365,6 +477,7 @@ header{
 			
 				footer > div > section#creditos > h1:hover{
 					opacity:1;
+					cursor:pointer;
 				}
 			
 			footer > div > section#creditos > p{
