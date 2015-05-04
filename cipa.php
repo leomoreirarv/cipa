@@ -1,4 +1,7 @@
 ﻿<?php include "topo.php"; ?>
+<h1>CIPA</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc felis, accumsan non maximus quis, mollis quis metus. Mauris placerat tempus malesuada. Etiam ornare feugiat tellus, quis bibendum dolor ultricies vel. Pellentesque odio lectus, egestas nec ultricies at, lobortis vel leo. Vestibulum a rutrum enim. Curabitur tristique luctus lectus quis aliquam. Fusce ultricies ipsum in eros sagittis facilisis.</p>
+
 <h2>Nossa História</h2>
 <p>Nascida em 2002 e consolidada no mercado em 2005 como a primeira empresa especialista em segurança e engenharia do trabalho a CIPA ASSESSORIA, em Rio Verde e região com uma vocação de atender principalmente as empresas de pequeno e meio porte, mas hoje com a vasta experiência de seus profissionais dotados de qualidade e pro ativismo, buscou parceiros (rurais e urbanos) e assim tem atendido varias empresas de variados seguimentos. Com o intuito de ajudar a proteger o patrimônio das empresas e a integridade do trabalhador a CIPA ASSESSORIA nasceu para servir.</p>
 <h2>Meta</h2>
